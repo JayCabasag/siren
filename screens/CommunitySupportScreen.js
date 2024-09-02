@@ -1,14 +1,17 @@
-import { Text } from 'react-native'
+import { StyleSheet, Text } from 'react-native'
 import React from 'react'
 import { View } from '../components'
+import { Colors } from '../config'
 
-export default function ContactScreen() {
+const CommunitySupportScreen = () => {
   return (
     <View isSafe style={styles.container}>
-      <Text>ContactScreen</Text>
+      <Text>CommunictySupportScreen</Text>
     </View>
   )
 }
+
+export default CommunitySupportScreen
 
 const styles = StyleSheet.create({
     container: {

@@ -2,13 +2,15 @@ import { Text } from 'react-native'
 import React from 'react'
 import { View } from '../components'
 
-export default function ContactScreen() {
+const EmergencyAlertScreen = () => {
   return (
     <View isSafe style={styles.container}>
-      <Text>ContactScreen</Text>
+      <Text>EmergencyAlertScreen</Text>
     </View>
   )
 }
+
+export default EmergencyAlertScreen
 
 const styles = StyleSheet.create({
     container: {

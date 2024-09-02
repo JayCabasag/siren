@@ -2,13 +2,15 @@ import { Text } from 'react-native'
 import React from 'react'
 import { View } from '../components'
 
-export default function ContactScreen() {
+const EducationalContentScreen = () => {
   return (
     <View isSafe style={styles.container}>
-      <Text>ContactScreen</Text>
+      <Text>EducationalContentScreen</Text>
     </View>
   )
 }
+
+export default EducationalContentScreen
 
 const styles = StyleSheet.create({
     container: {
