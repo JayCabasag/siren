@@ -4,7 +4,7 @@ import { Formik } from "formik";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 
-import { View, TextInput, Logo, Button, FormErrorMessage } from "../components";
+import { View, TextInput, Logo, Button, FormErrorMessage, Separator } from "../components";
 import { Images, Colors, auth } from "../config";
 import { useTogglePasswordVisibility } from "../hooks";
 import { loginValidationSchema } from "../utils";
@@ -27,7 +27,7 @@ export const LoginScreen = ({ navigation }) => {
           {/* LogoContainer: consist app logo and screen title */}
           <View style={styles.logoContainer}>
             <Logo uri={Images.logo} />
-            <Text style={styles.screenTitle}>Welcome back!</Text>
+            <Text style={styles.screenTitle}>Welcome!</Text>
           </View>
           <Formik
             initialValues={{
@@ -92,6 +92,19 @@ export const LoginScreen = ({ navigation }) => {
               </>
             )}
           </Formik>
+          {/** Social Media Button */}
+          <View style={{ position: 'relative', marginTop: 20, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <Separator style={{ backgroundColor: Colors.lightGray, height: 2, marginTop: 10 }}/>
+            <Text style={{ fontSize: 18, padding: 10, position: 'absolute', top: -10, borderRadius: 100, backgroundColor: Colors.white }}>or</Text>
+            <View style={{ marginTop: 15, display: 'flex', flexDirection: 'row', gap: 10 }}>
+              <Button style={{ padding: 10 , backgroundColor: Colors.lightGray }}>
+                <Logo uri={Images.google} style={{ height: 25, width: 25 }}/>
+              </Button>
+              <Button style={{ padding: 10 , backgroundColor: Colors.lightGray }}>
+                <Logo uri={Images.facebook} style={{ height: 25, width: 25 }}/>
+              </Button>
+            </View>
+          </View>
           {/* Button to navigate to SignupScreen to create a new account */}
           <Button
             style={styles.borderlessButtonContainer}
@@ -106,11 +119,6 @@ export const LoginScreen = ({ navigation }) => {
             onPress={() => navigation.navigate("ForgotPassword")}
           />
         </KeyboardAwareScrollView>
-      </View>
-
-      {/* App info footer */}
-      <View style={styles.footer}>
-        <Text style={styles.footerText}>Expo Firebase Starter App</Text>
       </View>
     </>
   );

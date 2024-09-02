@@ -3,8 +3,8 @@ import { Image, StyleSheet } from 'react-native';
 
 import { Images } from '../config';
 
-export const Logo = ({ uri }) => {
-  return <Image source={uri} style={styles.image} />;
+export const Logo = ({ uri, style }) => {
+  return <Image source={uri} style={[styles.image, style]} />;
 };
 
 const styles = StyleSheet.create({

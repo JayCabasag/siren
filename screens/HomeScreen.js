@@ -13,6 +13,7 @@ export const HomeScreen = () => {
       <Button title="Sign Out" onPress={handleLogout} />
     </View>
   );
+  
 };
 
 const styles = StyleSheet.create({
