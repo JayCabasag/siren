@@ -93,15 +93,15 @@ export const LoginScreen = ({ navigation }) => {
             )}
           </Formik>
           {/** Social Media Button */}
-          <View style={{ position: 'relative', marginTop: 20, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <Separator style={{ backgroundColor: Colors.lightGray, height: 2, marginTop: 10 }}/>
-            <Text style={{ fontSize: 18, padding: 10, position: 'absolute', top: -10, borderRadius: 100, backgroundColor: Colors.white }}>or</Text>
-            <View style={{ marginTop: 15, display: 'flex', flexDirection: 'row', gap: 10 }}>
-              <Button onPress={handleGoogleSignin} style={{ padding: 10 , backgroundColor: Colors.lightGray }}>
-                <Logo uri={Images.google} style={{ height: 25, width: 25 }}/>
+          <View style={styles.socialLoginContainer}>
+            <Separator style={styles.separator}/>
+            <Text style={styles.orLabelText}>or</Text>
+            <View style={styles.socialButtonsContainer}>
+              <Button onPress={handleGoogleSignin} style={styles.socialButton}>
+                <Logo uri={Images.google} style={styles.socialButtonIcon}/>
               </Button>
-              <Button style={{ padding: 10 , backgroundColor: Colors.lightGray }}>
-                <Logo uri={Images.facebook} style={{ height: 25, width: 25 }}/>
+              <Button style={styles.socialButton}>
+                <Logo uri={Images.facebook} style={styles.socialButtonIcon}/>
               </Button>
             </View>
           </View>
@@ -138,6 +138,40 @@ const styles = StyleSheet.create({
     fontWeight: "700",
     color: Colors.black,
     paddingTop: 20,
+  },
+  socialLoginContainer: { 
+    position: 'relative', 
+    marginTop: 20, 
+    display: 'flex', 
+    alignItems: 'center', 
+    justifyContent: 'center'
+  },
+  separator: { 
+    backgroundColor: Colors.lightGray, 
+    height: 2, 
+    marginTop: 10 
+  },
+  orLabelText: { 
+    fontSize: 18, 
+    padding: 10, 
+    position: 'absolute', 
+    top: -10, 
+    borderRadius: 100, 
+    backgroundColor: Colors.white 
+  },
+  socialButtonsContainer: { 
+    marginTop: 15, 
+    display: 'flex', 
+    flexDirection: 'row', 
+    gap: 10 
+  },
+  socialButton: { 
+    padding: 10 , 
+    backgroundColor: Colors.lightGray 
+  },
+  socialButtonIcon: { 
+    height: 25, 
+    width: 25 
   },
   footer: {
     backgroundColor: Colors.white,
