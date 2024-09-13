@@ -97,7 +97,7 @@ export const LoginScreen = ({ navigation }) => {
             <Separator style={{ backgroundColor: Colors.lightGray, height: 2, marginTop: 10 }}/>
             <Text style={{ fontSize: 18, padding: 10, position: 'absolute', top: -10, borderRadius: 100, backgroundColor: Colors.white }}>or</Text>
             <View style={{ marginTop: 15, display: 'flex', flexDirection: 'row', gap: 10 }}>
-              <Button style={{ padding: 10 , backgroundColor: Colors.lightGray }}>
+              <Button onPress={handleGoogleSignin} style={{ padding: 10 , backgroundColor: Colors.lightGray }}>
                 <Logo uri={Images.google} style={{ height: 25, width: 25 }}/>
               </Button>
               <Button style={{ padding: 10 , backgroundColor: Colors.lightGray }}>
