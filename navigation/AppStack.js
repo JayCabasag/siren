@@ -11,8 +11,6 @@ import EducationalContentScreen from "../screens/EducationalContentScreen";
 import CommunitySupportScreen from "../screens/CommunitySupportScreen";
 import ReportHistoryScreen from "../screens/ReportHistoryScreen";
 import HomeScreen from "../screens/HomeScreen";
-import ResponderSide from "../screens/ResponderSide";
-import ResponderAlert from "../screens/ResponderAlert";
 import SettingScreen from "../screens/SettingScreen";
 
 const Stack = createStackNavigator();
@@ -30,8 +28,6 @@ export const AppStack = () => {
 				<Stack.Screen name="Educational" component={EducationalContentScreen} />
 				<Stack.Screen name="CommunitySupport" component={CommunitySupportScreen} />
 				<Stack.Screen name="ReportHistory" component={ReportHistoryScreen} />
-				<Stack.Screen name="ResponderSide" component={ResponderSide} />
-				<Stack.Screen name="ResponderAlert" component={ResponderAlert} />
 				<Stack.Screen name="Setting" component={SettingScreen} />
     </Stack.Navigator>
   );

@@ -8,7 +8,7 @@ import { auth } from "../config";
 const Header = ({ responder = false }) => {
 	const handleLogout = () => {	
 		
-		// signOut(auth).catch((error) => console.log("Error logging out: ", error));
+		signOut(auth).catch((error) => console.log("Error logging out: ", error));
 	  }
 	return (
 		<View style={styles.container}>
