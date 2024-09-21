@@ -9,7 +9,7 @@ const Footer = ({navigation}) => {
 	return (
 		<KeyboardAvoidingView style={styles.container}>
 			<View style={styles.wrapper}>
-				<TouchableOpacity style={styles.icon} onPress={() => navigation.navigate("Dashboard")}>
+				<TouchableOpacity style={styles.icon} onPress={() => navigation.navigate("Home")}>
 					<Icon name="home" size={30} color={"#0C0C63"} />
 					<Text style={styles.iconText}>Home</Text>
 				</TouchableOpacity>

@@ -9,7 +9,7 @@ import StyledContainer from "../components/StyledContainer";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-const Dashboard = ({ navigation }) => {
+const HomeScreen = ({ navigation }) => {
 	return (
 		<StyledContainer>
 			<Header />
@@ -64,7 +64,7 @@ const Dashboard = ({ navigation }) => {
 	);
 };
 
-export default Dashboard;
+export default HomeScreen;
 
 const styles = StyleSheet.create({
 	container: {
