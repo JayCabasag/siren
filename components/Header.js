@@ -1,20 +1,29 @@
-import { Image, Pressable, StyleSheet, Text, View } from "react-native";
+import { Alert, Image, Pressable, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import Icon from "react-native-vector-icons/FontAwesome";
 
+import { signOut } from "firebase/auth";
+import { auth } from "../config";
+
 const Header = ({ responder = false }) => {
+	const handleLogout = () => {	
+		
+		// signOut(auth).catch((error) => console.log("Error logging out: ", error));
+	  }
 	return (
 		<View style={styles.container}>
 			<Pressable>
 				<Icon name="bell" size={40} color={"#93E0EF"} />
 			</Pressable>
-			<Pressable>
+			<Pressable 
+			onPress={handleLogout}>
 				{responder ? (
 					<Image source={require("../assets/policeman.png")} style={styles.police}/>
 				) : (
 					<Icon name="user-circle" size={40} color={"#93E0EF"} />
 				)}
 			</Pressable>
+			
 		</View>
 	);
 };
