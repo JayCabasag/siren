@@ -25,9 +25,6 @@
       },
       "package": "com.sirenapplication.siren"
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
     "extra": {
       "eas": {
         "projectId": "47b96b66-3d17-4b28-8e79-adb603aaa8df"

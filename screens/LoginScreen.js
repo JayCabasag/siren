@@ -97,7 +97,7 @@ export const LoginScreen = ({ navigation }) => {
             <Separator style={styles.separator}/>
             <Text style={styles.orLabelText}>or</Text>
             <View style={styles.socialButtonsContainer}>
-              <Button onPress={handleGoogleSignin} style={styles.socialButton}>
+              <Button style={styles.socialButton}>
                 <Logo uri={Images.google} style={styles.socialButtonIcon}/>
               </Button>
               <Button style={styles.socialButton}>
